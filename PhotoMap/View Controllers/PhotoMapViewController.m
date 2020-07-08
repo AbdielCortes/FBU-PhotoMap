@@ -7,9 +7,10 @@
 //
 
 #import "PhotoMapViewController.h"
+#import "LocationsViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface PhotoMapViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PhotoMapViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, LocationsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
@@ -58,14 +59,18 @@
     [self performSegueWithIdentifier:@"tagSegue" sender:nil];
 }
 
-/*
+- (void)locationsViewController:(LocationsViewController *)controller didPickLocationWithLatitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
+    [self.navigationController popToViewController:self animated:YES];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    LocationsViewController *locationVC = [segue destinationViewController];
+    locationVC.delegate = self;
 }
-*/
 
 @end
