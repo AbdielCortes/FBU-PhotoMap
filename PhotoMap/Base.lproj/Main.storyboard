@@ -70,11 +70,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="349" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-nZ-8sL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-l" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-nZ-8sL">
                                                     <rect key="frame" x="8" y="11" width="32" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="xgc-7v-Pmp"/>
-                                                        <constraint firstAttribute="height" constant="32" id="yBW-dh-Q5I"/>
+                                                        <constraint firstAttribute="width" secondItem="fzg-nZ-8sL" secondAttribute="height" multiplier="1:1" id="vbZ-AZ-Wkl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai Basil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlx-Dj-obh">
@@ -91,15 +90,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="leading" secondItem="hEv-ev-UD4" secondAttribute="leading" id="AAK-38-eMQ"/>
-                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="leading" secondItem="fzg-nZ-8sL" secondAttribute="trailing" constant="8" id="E42-ZF-SDe"/>
-                                                <constraint firstItem="fzg-nZ-8sL" firstAttribute="leading" secondItem="sAK-kx-BbN" secondAttribute="leading" constant="8" id="Kq8-b4-3d8"/>
-                                                <constraint firstAttribute="trailing" secondItem="hEv-ev-UD4" secondAttribute="trailing" constant="8" id="VXc-bz-JCF"/>
-                                                <constraint firstAttribute="trailing" secondItem="Qlx-Dj-obh" secondAttribute="trailing" constant="8" id="iuf-mJ-wyk"/>
-                                                <constraint firstItem="hEv-ev-UD4" firstAttribute="leading" secondItem="fzg-nZ-8sL" secondAttribute="trailing" constant="8" id="lXI-ds-iEv"/>
-                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="top" constant="14" id="m0a-n8-xAa"/>
-                                                <constraint firstItem="hEv-ev-UD4" firstAttribute="top" secondItem="Qlx-Dj-obh" secondAttribute="bottom" constant="2" id="rMI-rl-Ohm"/>
-                                                <constraint firstItem="fzg-nZ-8sL" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="top" constant="11" id="uJn-GB-CBt"/>
+                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="topMargin" constant="3" id="1Ux-Ay-6GT"/>
+                                                <constraint firstItem="fzg-nZ-8sL" firstAttribute="leading" secondItem="sAK-kx-BbN" secondAttribute="leading" constant="8" id="NuS-yd-l6I"/>
+                                                <constraint firstItem="hEv-ev-UD4" firstAttribute="leading" secondItem="fzg-nZ-8sL" secondAttribute="trailing" constant="8" id="SlA-4z-QWH"/>
+                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sAK-kx-BbN" secondAttribute="trailingMargin" id="SzR-bL-rtG"/>
+                                                <constraint firstItem="hEv-ev-UD4" firstAttribute="top" secondItem="Qlx-Dj-obh" secondAttribute="bottom" constant="2" id="TYw-4S-e0L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hEv-ev-UD4" secondAttribute="bottom" constant="2" id="cIE-MT-gvY"/>
+                                                <constraint firstItem="hEv-ev-UD4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sAK-kx-BbN" secondAttribute="trailingMargin" id="g2r-Gg-Gbg"/>
+                                                <constraint firstItem="Qlx-Dj-obh" firstAttribute="leading" secondItem="fzg-nZ-8sL" secondAttribute="trailing" constant="8" id="mqG-YF-pQh"/>
+                                                <constraint firstItem="fzg-nZ-8sL" firstAttribute="top" secondItem="sAK-kx-BbN" secondAttribute="top" constant="11" id="rDe-n3-W4U"/>
+                                                <constraint firstAttribute="bottom" secondItem="fzg-nZ-8sL" secondAttribute="bottom" constant="18" id="vw9-WX-doM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-1M-XUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="-564"/>
+            <point key="canvasLocation" x="1872.8" y="-564.46776611694156"/>
         </scene>
         <!--Full Image View Controller-->
         <scene sceneID="Qsj-fY-ewc">
@@ -165,5 +165,6 @@
     </scenes>
     <resources>
         <image name="camera" width="30" height="30"/>
+        <image name="camera-l" width="30" height="30"/>
     </resources>
 </document>
