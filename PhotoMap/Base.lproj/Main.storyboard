@@ -16,23 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tPV-3d-mY4">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tPV-3d-mY4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-E5-h4d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-E5-h4d">
                                 <rect key="frame" x="121" y="511" width="133" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="tappedCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3y-UD-lVV"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-Fr-7V3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-Fr-7V3">
                                 <rect key="frame" x="121" y="511" width="133" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vSb-Fr-7V3" secondAttribute="height" multiplier="133:128" id="Zts-LK-5d0"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vSb-Fr-7V3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="105" id="0yd-ca-CvB"/>
+                            <constraint firstItem="vSb-Fr-7V3" firstAttribute="trailing" secondItem="WUt-E5-h4d" secondAttribute="trailing" id="2tl-Mu-OEG"/>
+                            <constraint firstAttribute="trailing" secondItem="tPV-3d-mY4" secondAttribute="trailing" id="4bS-lC-I42"/>
+                            <constraint firstItem="vSb-Fr-7V3" firstAttribute="top" secondItem="WUt-E5-h4d" secondAttribute="top" id="AES-1I-3FQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="vSb-Fr-7V3" secondAttribute="bottom" constant="28" id="HGH-NE-bKQ"/>
+                            <constraint firstItem="tPV-3d-mY4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UFi-CJ-nWO"/>
+                            <constraint firstAttribute="bottom" secondItem="tPV-3d-mY4" secondAttribute="bottom" id="YOV-V2-i0J"/>
+                            <constraint firstItem="vSb-Fr-7V3" firstAttribute="leading" secondItem="WUt-E5-h4d" secondAttribute="leading" id="bXm-uL-TJ0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSb-Fr-7V3" secondAttribute="trailing" constant="105" id="dry-1T-jdd"/>
+                            <constraint firstItem="tPV-3d-mY4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hwf-1P-dUx"/>
+                            <constraint firstItem="vSb-Fr-7V3" firstAttribute="bottom" secondItem="WUt-E5-h4d" secondAttribute="bottom" id="mJ6-Br-g98"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Map" id="p1y-Ku-BJR"/>

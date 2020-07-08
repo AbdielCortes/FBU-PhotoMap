@@ -9,8 +9,8 @@
 #import "LocationsViewController.h"
 #import "LocationCell.h"
 
-static NSString * const clientID = @"key";
-static NSString * const clientSecret = @"key";
+static NSString * const clientID = @"Key";
+static NSString * const clientSecret = @"Key";
 
 @interface LocationsViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -52,7 +52,7 @@ static NSString * const clientSecret = @"key";
     NSDictionary *venue = self.results[indexPath.row];
     NSNumber *lat = [venue valueForKeyPath:@"location.lat"];
     NSNumber *lng = [venue valueForKeyPath:@"location.lng"];
-    NSLog(@"%@, %@", lat, lng);
+//    NSLog(@"%@, %@", lat, lng);
     [self.delegate locationsViewController:self didPickLocationWithLatitude:lat longitude:lng];
 }
 
@@ -78,7 +78,7 @@ static NSString * const clientSecret = @"key";
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            NSLog(@"response: %@", responseDictionary);
+//            NSLog(@"response: %@", responseDictionary);
             self.results = [responseDictionary valueForKeyPath:@"response.venues"];
             [self.tableView reloadData];
         }
